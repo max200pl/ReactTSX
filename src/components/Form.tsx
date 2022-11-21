@@ -7,9 +7,9 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
     event.preventDefault();
     const enteredText = todoTextInput.current!.value;
 
-    if (enteredText.trim().length === 0) {
+    if (enteredText?.trim().length === 0) {
+      // saddasdsa
       // throw an error
-
       return;
     }
     props.onAddTodo(enteredText);
